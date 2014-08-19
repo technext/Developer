@@ -24,9 +24,9 @@
 
 #Screenshot
 
+![Screenshot of HTML 5]
+(https://raw.githubusercontent.com/technext/Developer/master/Features/html5.png)
 
-![Screenshot of Developer]
-(https://raw.githubusercontent.com/technext/Developer/master/Features/html5.png) (https://raw.githubusercontent.com/technext/Developer/master/Features/css3.png) (https://raw.githubusercontent.com/technext/Developer/master/Features/w3c.png)
 
 #Demo Link
 Check out the demo of Flusk responsive HTML template at (http://themewagon.com/demo/Developer/)
