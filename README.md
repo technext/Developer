@@ -1,5 +1,7 @@
 #Features
 
+![Screenshot of Features]
+
 (https://raw.githubusercontent.com/technext/Developer/master/Features/html5.png) (https://raw.githubusercontent.com/technext/Developer/master/Features/css3.png) (https://raw.githubusercontent.com/technext/Developer/master/Features/w3c.png)
 
 - Responsive Layout powered by Bootstrap 3
@@ -27,7 +29,7 @@
 #Screenshot
 
 
-![Screenshot of Flusk]
+![Screenshot of Developer]
 ()
 
 #Demo Link
