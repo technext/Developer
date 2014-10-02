@@ -1,3 +1,5 @@
+// 
+
 (function($,sr) {
   // debouncing function from John Hann
   // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
@@ -26,53 +28,51 @@
 }
 )(jQuery,'smartresize');
 
-
-
-
 $(function() {
 
-	// Fix the Home Height
+    // Fix the Home Height
 
-  var setHomeBannerHeight = function(){
-	 var homeHeight= $(window).height();
-	 $('#overlay-1').height(homeHeight);
+    var setHomeBannerHeight = function(){
+	   var homeHeight= $(window).height();
+	   $('#overlay-1').height(homeHeight);
     }
     setHomeBannerHeight();
 
-	// Smooth Scrolling and remove Hash tag from link
-
-	$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-
-
+    // Arrow drop effect
 
     var $scrollDownArrow = $('.bottom > a');
-  var animateScrollDownArrow = function() {
-    $scrollDownArrow.animate( {
-      top: 5,
-    }
-    , 400, "linear", function() {
-      $scrollDownArrow.animate( {
-        top: -5,
-      }
-      , 400, "linear", function() {
-        animateScrollDownArrow();
-      }
-      );
-    });
-  }
-  animateScrollDownArrow();
+  /*  var animateScrollDownArrow = function() {
+        $scrollDownArrow.animate( {
+            top: 5,
+        }, 1000, "linear", function() {
+            $scrollDownArrow.animate( {
+                top: -5,
+            }, 1000, "linear", function() {
+                animateScrollDownArrow();
+            }
+            );
+            });
+        }
+    animateScrollDownArrow();*/
 
+
+    // Smooth Scrolling and remove Hash tag from link
+
+    $('a[href*=#]:not([href=#])').click(function() {
+       
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000, function(){
+                  
+                });
+                return false;
+            }
+        }
+    });
 
 
   ///////////////////////////////

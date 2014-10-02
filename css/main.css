@@ -41,7 +41,7 @@ html, body {
 	padding: 0;
 }
 
-a, a:active, a:focus, a:hover {
+*, *:active, *:focus, *:hover {
 	outline: none;
 }
 
@@ -139,7 +139,6 @@ body {
 
 .overlay-3 {
 	padding: 60px 0;
-	background-color: rgba(50, 81, 121, 0.6);
 }
 
 /*////////////////////////////////////////////////////////////////////////
@@ -305,7 +304,7 @@ body {
 
 .facebook-icon {
     padding: 10px 15px;
-    border: 3px solid #44619D;
+    border: 1px solid #44619D;
     background-color: #44619D;
 }
 
@@ -316,7 +315,7 @@ body {
 
 .twitter-icon {
 	padding: 10px 12px;
-	border: 3px solid #33CCFF;
+	border: 1px solid #33CCFF;
 	background-color: #33CCFF;
 }
 
@@ -327,7 +326,7 @@ body {
 
 .g-plus-icon {
 	padding: 10px 12px;
-	border: 3px solid #DD4C39;
+	border: 1px solid #DD4C39;
 	background-color: #DD4C39;
 }
 
@@ -338,7 +337,7 @@ body {
 
 .linkedin-icon {
 	padding: 10px 13px;
-	border: 3px solid #1B86BD;
+	border: 1px solid #1B86BD;
 	background-color: #1B86BD;
 }
 
@@ -411,12 +410,14 @@ input[type="submit"] {
 	width: 100%;
 	padding: 10px;
 	transition: 0.5s background linear;
+	font-weight: bold;
 }
 
 input[type="submit"]:hover {
-	background: #35405f;
-	border-color: #35405f;
+	background: #fff;
+	border-color: #fff;
 	transition: 0.5s background linear;
+	color: #333;
 }
 
 ::-webkit-input-placeholder {
@@ -436,7 +437,7 @@ input[type="submit"]:hover {
 /////////////////////////////////////////////////////////////////////*/
 
 #site-footer {
-    background-color: #35405f;
+    background-color: #444;
     color: #D5D5D5;
     padding: 14px;
     font-size: 14px;
