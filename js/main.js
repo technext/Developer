@@ -210,18 +210,27 @@ $(document).scroll(function(event) {
             
           var count1 = $('.count1'),
             count2 = $('.count2'),
-            count3 = $('.count3')
+            count3 = $('.count3'),
+            count4 = $('.count4'),
+            count5 = $('.count5'),
+            count6 = $('.count6')
             count1Num = count1.text(),
             count2Num = count2.text(),
-            count3Num = count3.text();
+            count3Num = count3.text(),
+            count4Num = count4.text(),
+            count5Num = count5.text(),
+            count6Num = count6.text();
 
             var max = Math.max(parseInt(count1Num),parseInt(count2Num));
-            max = Math.max(max,parseInt(count3Num));
+            max = Math.max(max,parseInt(count6Num));
             console.log(max);
 
             countUpTo(count1Num,count1,max);
-           countUpTo(count2Num,count2,max);
-           countUpTo(count3Num,count3,max);
+            countUpTo(count2Num,count2,max);
+            countUpTo(count3Num,count3,max);
+            countUpTo(count4Num,count4,max);
+            countUpTo(count5Num,count5,max);
+            countUpTo(count6Num,count6,max);
       }
 
     }
