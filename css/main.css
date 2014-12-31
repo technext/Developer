@@ -21,11 +21,13 @@ Text Domain: developer
 * 05.0 - Home
 * 06.0 - Latest Works
 * 	 06.1 - isotope (http://isotope.metafizzy.co/)
+*	 06.2 - Image Hover Effect
 * 07.0 - More About Me
-* 	 07.1 - Social icons
+* 	 07.1 - Animated Number
 * 08.0 - Testimonials
 * 	 08.1 - Owl Carousel (http://owlgraphic.com/owlcarousel/)
 * 09.0 - Contact
+*	 09.1 - Social Icon
 * 10.0 - Footer
 * 11.0 - Responsive styles
 * -----------------------------------------------------------------------------
@@ -61,15 +63,26 @@ h1, h2, h3, h4, h5,h6 {
 }
 
 body {
-	font: 15px/23px "Lucida Sans","Liberation Sans","Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif
+	font: 15px/23px "Lucida Sans","Liberation Sans","Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+	background-color: rgb(224, 247, 246);
+
 }
 
 .btn {
 	transition: 0.5s background linear;
 }
 
+.btn:focus
+{
+	color: #fff;
+}
+
 .block-heading {
 	margin-bottom: 60px;
+}
+
+.block-heading p {
+    font-size: 18px;
 }
 
 /*////////////////////////////////////////////////////////////////////////
@@ -85,9 +98,10 @@ body {
 	position: fixed;
 	width: 100%;
 	/* background-color: #35405f; */
-	background-color: #1B3276;
+	/* background-color: rgba(153, 153, 153, 0.62); */
+	background-color: rgba(32, 178, 170, 0.86);
 	padding: 0 30px;
-	z-index: 1;
+	z-index: 100;
 }
 
 #site-header h1 {
@@ -136,8 +150,13 @@ body {
 	transition: 0.5s background linear;
 }
 
-.site-nav ul li a:hover {
+/* .site-nav ul li a:hover {
 	background: rgba(255, 255, 255, 0.11);
+} */
+
+.site-nav ul li a:hover, .site-nav ul li a:focus
+{
+	background-color: rgba(0, 255, 255, 0.58);
 }
 
 /*////////////////////////////////////////////////////////////////////////
@@ -146,7 +165,8 @@ body {
 
 #overlay-1 {
 	/* background-color: rgba(32, 30, 30, 0.52); */
-	background-color: rgba(33, 32, 42, 0.62);
+	/* background-color: rgba(33, 32, 42, 0.62); */
+	background-color: rgba(17, 55, 46, 0.75);
 	position: relative;
 }
 
@@ -157,8 +177,17 @@ body {
 
 .overlay-3 {
 	padding: 60px 0;
-	background-color: rgba(9, 20, 39, 0.83);
+	/* background-color: rgba(9, 20, 39, 0.83); */
+	/* background-color: rgba(24, 77, 77, 0.93); */
+	background-color: rgba(33, 103, 88, 0.9);
 }
+
+.overlay {
+    background: none repeat scroll 0 0 rgba(115, 224, 179, 0.72);
+    width: 100%;
+    height: 100%;
+}
+
 
 /*////////////////////////////////////////////////////////////////////////
 //  05 - Home
@@ -169,28 +198,30 @@ body {
 }
 
 .pro-name {
-    font-size: 85px;
+    font-size: 93px;
     margin: 0;
-    margin-bottom: 40px;  
+    margin-bottom: 15px;  
     /* font-family: 'Lato', sans-serif; */
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 200;
-    line-height: 96px;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: 'Niconne', cursive;
+    font-weight: 400;
+    line-height: 90px;
     color: #fff;
     letter-spacing: 1px;
     word-spacing: 6px;
-    text-shadow: 1px 1px #000;
+    text-shadow: -2px -2px #000;
 }
 
 .tagline {
 	font-size: 27px;
 	margin-bottom: 60px;
 	color: #fff;
-	font-family: 'Oxygen', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	line-height: 62px;
-	word-spacing: 5px;
-	text-transform: uppercase;
+	line-height: 56px;
+	word-spacing: 2px;
+	text-shadow: 2px 2px #1C2725;
+	letter-spacing: 2px;
 }
 
 .bottom {
@@ -209,20 +240,21 @@ body {
 .btn-hire {
 	text-transform: uppercase;
 	color: #fff;
-	border: 1px solid #fff;
+	border: 1px solid lightseagreen;
 	font-family: 'Oxygen', sans-serif;
 	font-weight: 300;
 	word-spacing: 5px;
 	letter-spacing: 1px;
 	border-radius: 0;
 	font-size: 18px;
+	background-color: rgba(32, 178, 170, 0.86);
 	padding: 16px 48px;
 }
 
 .btn-hire:hover {
 	color: #fff;
-	border: 1px solid #71b644;
-	background-color: #71b644;
+	border: 1px solid #fff;
+	background-color: transparent;
 }
 
 /*////////////////////////////////////////////////////////////////////////
@@ -230,12 +262,14 @@ body {
 ///////////////////////////////////////////////////////////////////////*/
 
 #portfolio {
-	background-color: #fff;
 	padding: 60px 0;
 }
 
 #portfolio .block-heading h1 {
-    color: #35405f;
+    color: rgb(0, 129, 129);
+	font-family: 'Niconne', cursive;
+	font-weight: 400;
+	font-size: 62px;
 }
 
 .portfolio-item img {
@@ -273,21 +307,88 @@ body {
 }
 
 .btn-view {
-	border: 1px solid #35405f;
+	/* border: 1px solid #35405f;
 	color: #35405f;
+	border-radius: 0; */
+	text-transform: uppercase;
+	color: lightseagreen;
+	border: 1px solid rgba(32, 178, 170, 0.86);
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 300;
+	word-spacing: 5px;
+	letter-spacing: 1px;
 	border-radius: 0;
+	font-size: 18px;
+	padding: 16px 48px;
 }
 
 .btn-view:hover {
-	background-color: rgba(0, 39, 84, 0.84);
-	color: #fff; 
+	color: #fff;
+	border: 1px solid lightseagreen;
+	background-color: rgba(32, 178, 170, 0.86);
+}
+
+
+/* ==============================  Image hover effect ============================== */
+
+
+.effect-zoe:hover figcaption, 
+.effect-zoe:hover h2, 
+.effect-zoe:hover p.icon-links a{
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.effect-zoe h2 {
+	display: inline-block;
+}
+.effect-zoe figcaption{
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+	height: 3.75em;
+	background: rgba(0,0,0,0.75);
+	color: #3c4a50;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+.grid  figcaption, .grid  figcaption > a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.grid  figcaption{
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.grid .effect-zoe{
+	position: relative;
+	float: left;
+	overflow: hidden;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+.effect-zoe p.icon-links a i
+{
+	display: inline-block;
+	padding: 30px 10px;
+	color: cyan;
+	font-size: 22px;
 }
 
 /* ///////////////////////////////////////////////////////////////////// 
 //  07 - More About Me 
 /////////////////////////////////////////////////////////////////////*/
 
-#services {
+/* #services {
 	background: url(../img/bg/bg-2.jpg) no-repeat center center fixed;
 	background-size: cover;
 	color: #fff;
@@ -306,79 +407,82 @@ body {
 	text-align: center;
 	line-height: 90%;
 	margin-bottom: 80px;
-}
-
-/* ///////////////////////////////////////////////////////////////////// 
-//  07 - More About Me > Social
-/////////////////////////////////////////////////////////////////////*/
-
-.social-box {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 30px;
-}
-
-.social-box li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-box li a {
-	transition: 0.5s background linear;
-	color: #fff;
-}
-
-.facebook-icon {
-    padding: 10px 17px;
-    border: 1px solid #44619D;
-    background-color: #44619D;
-}
-
-.facebook-icon:hover {
-    background-color: transparent;
+} */
+#services .block-heading h1 {
     color: #fff;
+	font-family: 'Niconne', cursive;
+	font-weight: 400;
+	font-size: 62px;
+	word-spacing: 5px;
 }
 
-.twitter-icon {
-	padding: 10px 15px;
-	border: 1px solid #33CCFF;
-	background-color: #33CCFF;
+
+/* ============================  animated  numbers   ==================================*/
+
+.parallax{
+    width: 100%;
+    color: #fff;
+    text-align: center;
 }
 
-.twitter-icon:hover {
-	background-color: transparent;
-	color: #fff;
+#numbers
+{
+	background: url(../img/bg/number1.gif) repeat center center fixed;
+}
+#numbers .overlay{
+    padding: 60px 0px 80px 0px;
+}
+ul.numbersList {
+    margin: 0px auto;
+    padding: 0px;
+    overflow: hidden;
+    list-style: none;
+    text-align: center;
+}
+ul.numbersList li{
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+ul.numbersList li:last-child{
+    border: none;
+}
+ul.numbersList h4{
+    color: rgb(234, 234, 234);
+    margin-bottom: 58px;
+}
+ul.numbersList span{
+    font-size: 62px;
+    font-weight: 700;
 }
 
-.g-plus-icon {
-	padding: 10px 15px;
-	border: 1px solid #DD4C39;
-	background-color: #DD4C39;
+.numbers-title {
+    padding: 10px 0;
+    position: relative;
 }
 
-.g-plus-icon:hover {
-	background-color: transparent;
-	color: #fff;
-}
-
-.linkedin-icon {
-	padding: 10px 15px;
-	border: 1px solid #1B86BD;
-	background-color: #1B86BD;
-}
-
-.linkedin-icon:hover {
-	background-color: transparent;
-	color: #fff;
-}
 
 /* ///////////////////////////////////////////////////////////////////// 
 //  08 - Testimonials
 /////////////////////////////////////////////////////////////////////*/
 
 #testimonials {
-    background-color: #f1f0f0;  
     padding: 60px 0;
+}
+
+#testimonials .block-heading{
+	margin-bottom: 0px;
+}
+
+.testimonial p {
+    line-height: 34px;
+    margin-top: 20px;
+}
+
+#testimonials .block-heading h1
+{
+	color: rgb(0, 129, 129);
+	font-family: 'Niconne', cursive;
+	font-weight: 400;
+	font-size: 62px;
 }
 
 #testimonials .testimonial {
@@ -417,6 +521,14 @@ body {
 	background: url(../img/bg/contact-bg.jpg) no-repeat center center fixed;
 	background-size: cover;
 	color: #fff;
+}
+
+#contact .block-heading h1
+{
+	color: #fff;
+	font-family: 'Niconne', cursive;
+	font-weight: 400;
+	font-size: 62px;
 }
 
 .contact-info {
@@ -488,13 +600,78 @@ input[type="submit"]:hover {
    color: #fff;  
 }
 
+
+/* ///////////////////////////////////////////////////////////////////// 
+//  09 - contact > Social
+/////////////////////////////////////////////////////////////////////*/
+
+.social-box {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.social-box li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-box li a {
+	transition: 0.5s background linear;
+	color: #fff;
+}
+
+.facebook-icon {
+    padding: 10px 17px;
+    border: 1px solid #44619D;
+    background-color: #44619D;
+}
+
+.facebook-icon:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.twitter-icon {
+	padding: 10px 15px;
+	border: 1px solid #33CCFF;
+	background-color: #33CCFF;
+}
+
+.twitter-icon:hover {
+	background-color: transparent;
+	color: #fff;
+}
+
+.g-plus-icon {
+	padding: 10px 15px;
+	border: 1px solid #DD4C39;
+	background-color: #DD4C39;
+}
+
+.g-plus-icon:hover {
+	background-color: transparent;
+	color: #fff;
+}
+
+.linkedin-icon {
+	padding: 10px 15px;
+	border: 1px solid #1B86BD;
+	background-color: #1B86BD;
+}
+
+.linkedin-icon:hover {
+	background-color: transparent;
+	color: #fff;
+}
+
 /* ///////////////////////////////////////////////////////////////////// 
 //  10 - Footer
 /////////////////////////////////////////////////////////////////////*/
 
 #site-footer {
     /* background-color: #35405f; */
-    background-color: #1B3276;
+    background-color: rgba(32, 178, 170, 0.86);
     color: #fff;
     padding: 14px;
     font-size: 14px;
@@ -533,6 +710,11 @@ input[type="submit"]:hover {
     left: 1.5rem;
     font-size: 22px;
 }
+
+i.fa.fa-envelope-o {
+    left: 12px;
+}
+
 .contact-info p{
 	margin-left: 70px;
 	display: inline-block;
@@ -565,109 +747,12 @@ input[type="submit"]:hover {
 	}
 }
 
-/* -----------------  Image hover effect --------------------- */
-.effect-zoe:hover figcaption, .effect-zoe:hover h2, .effect-zoe:hover p.icon-links a{
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-.effect-zoe h2 {
-	display: inline-block;
-}
-.effect-zoe figcaption{
-	top: auto;
-	bottom: 0;
-	padding: 1em;
-	height: 3.75em;
-	background: rgba(0,0,0,0.62);
-	color: #3c4a50;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,100%,0);
-	transform: translate3d(0,100%,0);
-}
-.grid  figcaption, .grid  figcaption > a{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.grid  figcaption{
-	padding: 2em;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 1.25em;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-.grid .effect-zoe{
-	position: relative;
-	float: left;
-	overflow: hidden;
-	/* margin: 10px 1%; */
-	/* min-width: 320px; */
-	/* max-width: 480px; */
-	/* max-height: 360px; */
-	/* width: 48%; */
-	background: #3085a3;
-	text-align: center;
-	cursor: pointer;
-}
-.effect-zoe p.icon-links a i
-{
-	display: inline-block;
-	padding: 30px 10px;
-	color: cyan;
-	font-size: 22px;
-}
-/* ============================  animated  numbers   ==================================*/
-#numbers
-{
-	background: url(../img/bg/number1.gif) repeat center center fixed;
-}
-#numbers .overlay{
-    padding: 50px 0px 80px 0px;
-}
-ul.numbersList {
-    margin: 0px auto;
-    padding: 0px;
-    overflow: hidden;
-    list-style: none;
-    text-align: center;
-}
-ul.numbersList li{
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-ul.numbersList li:last-child{
-    border: none;
-}
-ul.numbersList h4{
-    color: darkgray;
-    margin-bottom: 58px;
-}
-ul.numbersList span{
-    font-size: 62px;
-    font-weight: 700;
+@media (max-width: 500px) {
+	.contact-info {
+		padding: 30px 10px;
+	}
 }
 
-.numbers-title {
-    padding: 10px 0;
-    position: relative;
-}
-
-.space80 {
-	margin-bottom: 80px;
-}
-.parallax{
-    width: 100%;
-    color: #fff;
-    text-align: center;
-}
-.overlay {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-}
 @media only screen and (max-width : 640px) {
     .parallax{
     background: url(../video/video.jpg) no-repeat center center fixed #444;
@@ -682,3 +767,5 @@ ul.numbersList span{
     background-size: cover;
     }
 }
+
+
