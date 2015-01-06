@@ -222,6 +222,7 @@ body {
 	word-spacing: 2px;
 	text-shadow: 2px 2px #1C2725;
 	letter-spacing: 2px;
+	text-transform: capitalize;
 }
 
 .bottom {
@@ -536,6 +537,7 @@ ul.numbersList span{
     text-align: left;
     font-size: 18px;
     line-height: 36px;
+    margin-top: 25px;
 }
 .
 .contact-info i {
@@ -607,7 +609,7 @@ input[type="submit"]:hover {
 
 .social-box {
     list-style-type: none;
-    padding: 0;
+    padding-left: 71px;
     margin-top: 30px;
 }
 
