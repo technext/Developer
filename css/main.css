@@ -69,7 +69,7 @@ body {
 }
 
 .btn {
-	transition: 0.5s background linear;
+	transition: 0.4s background linear;
 }
 
 .btn:focus
@@ -90,7 +90,7 @@ body {
 ///////////////////////////////////////////////////////////////////////*/
 
 #header {
-	background: url(../img/bg/bg-4.jpg) no-repeat center top fixed;
+	background: url(../img/bg/header-bg.jpg) no-repeat center top fixed;
 	background-size: cover;
 }
 
@@ -98,8 +98,8 @@ body {
 	position: fixed;
 	width: 100%;
 	/* background-color: #35405f; */
-	/* background-color: rgba(153, 153, 153, 0.62); */
-	background-color: rgba(32, 178, 170, 0.86);
+	background-color: rgba(144, 146, 153, 0.94);
+	/* background-color: rgba(32, 178, 170, 0.86); */
 	padding: 0 30px;
 	z-index: 100;
 }
@@ -165,8 +165,8 @@ body {
 
 #overlay-1 {
 	/* background-color: rgba(32, 30, 30, 0.52); */
-	/* background-color: rgba(33, 32, 42, 0.62); */
-	background-color: rgba(17, 55, 46, 0.75);
+	background-color: rgba(33, 32, 42, 0.44);
+	/* background-color: rgba(17, 55, 46, 0.75); */
 	position: relative;
 }
 
@@ -198,13 +198,14 @@ body {
 }
 
 .pro-name {
-    font-size: 93px;
+    font-size: 100px;
     margin: 0;
     margin-bottom: 15px;  
     /* font-family: 'Lato', sans-serif; */
     /* font-family: 'Source Sans Pro', sans-serif; */
-    font-family: 'Niconne', cursive;
+    /* font-family: 'Niconne', cursive; */
     font-weight: 400;
+    font-family: 'Rouge Script', cursive;
     line-height: 90px;
     color: #fff;
     letter-spacing: 1px;
@@ -240,22 +241,23 @@ body {
 
 .btn-hire {
 	text-transform: uppercase;
-	color: #fff;
-	border: 1px solid lightseagreen;
+	color: #111;
+	border: 1px solid rgb(136, 138, 145);
 	font-family: 'Oxygen', sans-serif;
 	font-weight: 300;
 	word-spacing: 5px;
 	letter-spacing: 1px;
+	box-shadow: 0 3px 1px 0 rgba(20, 20, 26, 0.55);
 	border-radius: 0;
 	font-size: 18px;
-	background-color: rgba(32, 178, 170, 0.86);
+	background-color: rgba(247, 255, 248, 1);
 	padding: 16px 48px;
 }
 
 .btn-hire:hover {
 	color: #fff;
-	border: 1px solid #fff;
-	background-color: transparent;
+	border: 1px solid #878A91;
+	background-color: rgba(32, 36, 47, 0.94);
 }
 
 /*////////////////////////////////////////////////////////////////////////
