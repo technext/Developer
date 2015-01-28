@@ -270,9 +270,11 @@ body {
 
 #portfolio .block-heading h1 {
     color: rgb(0, 129, 129);
-	font-family: 'Niconne', cursive;
+	
 	font-weight: 400;
-	font-size: 62px;
+	
+    font-size: 55px;
+    font-family: 'Milonga', cursive;
 }
 
 .portfolio-item img {
@@ -413,9 +415,11 @@ body {
 } */
 #services .block-heading h1 {
     color: #fff;
-	font-family: 'Niconne', cursive;
+	
+    font-family: 'Milonga', cursive;
 	font-weight: 400;
-	font-size: 62px;
+	
+    font-size: 55px;
 	word-spacing: 5px;
 }
 
@@ -483,9 +487,9 @@ ul.numbersList span{
 #testimonials .block-heading h1
 {
 	color: rgb(0, 129, 129);
-	font-family: 'Niconne', cursive;
+	font-family: 'Milonga', cursive;
 	font-weight: 400;
-	font-size: 62px;
+	font-size: 55px;
 }
 
 #testimonials .testimonial {
@@ -529,9 +533,9 @@ ul.numbersList span{
 #contact .block-heading h1
 {
 	color: #fff;
-	font-family: 'Niconne', cursive;
+	font-family: 'Milonga', cursive;
 	font-weight: 400;
-	font-size: 62px;
+	font-size: 55px;
 }
 
 .contact-info {
